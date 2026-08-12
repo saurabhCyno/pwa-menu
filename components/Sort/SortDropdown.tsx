@@ -60,7 +60,7 @@ export function SortDropdown() {
             exit={{ opacity: 0, y: -8, scale: 0.98 }}
             transition={{ duration: 0.15 }}
             role="listbox"
-            className="absolute left-4 right-4 z-20 mt-1 overflow-hidden rounded-xl border border-neutral-200 bg-white py-1 shadow-lg"
+            className="absolute left-4 right-4 z-40 mt-1 overflow-hidden rounded-xl border border-neutral-200 bg-white py-1 shadow-lg"
           >
             {SORT_OPTIONS.map((option) => (
               <li key={option.value} role="option" aria-selected={sort === option.value}>

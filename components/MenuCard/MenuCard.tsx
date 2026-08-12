@@ -35,7 +35,7 @@ export const MenuCard = memo(function MenuCard({ item }: MenuCardProps) {
   return (
     <motion.article
       variants={fadeSlideUp}
-      className="overflow-hidden rounded-2xl border border-neutral-100 bg-white shadow-card"
+      className="min-w-0 overflow-hidden rounded-2xl border border-neutral-100 bg-white shadow-card"
     >
       <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-100">
         {!imageLoaded && (
@@ -56,17 +56,12 @@ export const MenuCard = memo(function MenuCard({ item }: MenuCardProps) {
         </div>
       </div>
 
-      <div className="space-y-3 p-4">
-        <div className="flex items-start justify-between gap-3">
-          <div className="min-w-0 flex-1">
-            <h3 className="truncate text-base font-semibold text-neutral-900">
-              {item.name}
-            </h3>
-            <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-neutral-500">
-              {item.description}
-            </p>
-          </div>
-          <p className="shrink-0 text-base font-bold text-primary">
+      <div className="space-y-3 p-3">
+        <div className="flex flex-col gap-1">
+          <h3 className="truncate text-sm font-semibold text-neutral-900">
+            {item.name}
+          </h3>
+          <p className="shrink-0 text-sm font-bold text-primary">
             {formatPrice(item.price)}
           </p>
         </div>
@@ -94,7 +89,7 @@ export const MenuCard = memo(function MenuCard({ item }: MenuCardProps) {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="flex h-10 items-center justify-between rounded-xl bg-neutral-50 px-2 ring-1 ring-neutral-200"
+              className="flex h-10 w-full min-w-0 items-center justify-between gap-1 rounded-xl bg-neutral-50 px-2 ring-1 ring-neutral-200"
             >
               <motion.button
                 whileTap={{ scale: 0.9 }}

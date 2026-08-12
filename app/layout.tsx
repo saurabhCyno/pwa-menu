@@ -45,7 +45,7 @@ export default function RootLayout({
       <body className="min-h-dvh bg-shell font-sans text-neutral-900 antialiased">
         <div
           id="app-shell"
-          className="relative mx-auto min-h-dvh w-full min-w-[390px] max-w-[430px] overflow-x-hidden overflow-y-auto bg-surface shadow-2xl"
+          className="relative mx-auto h-dvh w-full min-w-[390px] max-w-[430px] overflow-x-hidden overflow-y-auto bg-surface shadow-2xl"
         >
           {children}
         </div>

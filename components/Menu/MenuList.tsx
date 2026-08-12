@@ -45,7 +45,7 @@ export function MenuList() {
       variants={containerStagger}
       initial="hidden"
       animate="visible"
-      className="space-y-4 px-4 pb-6 pt-4"
+      className="grid grid-cols-2 gap-3 px-4 pb-6 pt-4"
       aria-label="Menu items"
     >
       {items.map((item) => (
