@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Spice Garden — Restaurant Menu PWA
+
+A production-quality, mobile-first Restaurant Menu Progressive Web App built with Next.js App Router.
+
+## Features
+
+- Browse 22 menu items with images, descriptions, and prices
+- Live search with 400ms debounce
+- Filter by Veg / Non-Veg
+- Sort by price or alphabetically
+- Animated quantity controls on menu cards
+- Off-canvas cart drawer with customer form
+- WhatsApp order placement
+- Order confirmation screen
+- PWA installable with offline fallback
+- Premium mobile-first UI (390–430px centered viewport)
+
+## Tech Stack
+
+- Next.js 16 (App Router)
+- TypeScript
+- Tailwind CSS 4
+- Framer Motion
+- Zustand
+- @ducanh2912/next-pwa
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/           → Next.js app router (layout, page, manifest, offline)
+components/    → Feature-based UI components
+store/         → Zustand state management
+hooks/         → Custom React hooks
+lib/           → Utilities (cn, motion variants)
+utils/         → Helpers (validation, WhatsApp URL, formatting)
+types/         → TypeScript interfaces
+constants/     → App constants
+data/          → Menu data
+public/        → Static assets and PWA icons
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## WhatsApp Ordering
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Orders are sent to **9876543210** via WhatsApp with customer details and cart summary.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
