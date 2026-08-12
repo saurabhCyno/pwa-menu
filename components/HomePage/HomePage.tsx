@@ -5,6 +5,7 @@ import { StickyFilterSection } from "@/components/StickyFilterSection/StickyFilt
 import { MenuList } from "@/components/Menu/MenuList";
 import { FloatingCartButton } from "@/components/Cart/FloatingCartButton";
 import { CartDrawer } from "@/components/Cart/CartDrawer";
+import { InstallPrompt } from "@/components/Install/InstallPrompt";
 import { ThankYouScreen } from "@/components/ThankYou/ThankYouScreen";
 import { ToastContainer } from "@/components/ui/Toast";
 import { useDebouncedSearch } from "@/hooks/useDebouncedSearch";
@@ -27,6 +28,7 @@ export function HomePage() {
       </main>
       <FloatingCartButton />
       <CartDrawer />
+      <InstallPrompt />
       <ToastContainer />
     </>
   );
