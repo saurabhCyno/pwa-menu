@@ -19,7 +19,7 @@ export function FloatingCartButton() {
           exit={{ y: 80, opacity: 0 }}
           whileTap={{ scale: 0.96 }}
           onClick={openCart}
-          className="fixed bottom-6 left-4 right-4 z-30 mx-auto flex w-full max-w-[398px] items-center justify-between rounded-2xl bg-primary px-5 py-3.5 text-white shadow-xl shadow-primary/25"
+          className="fixed bottom-6 left-0 right-0 z-30 mx-auto flex w-fit items-center gap-5 rounded-2xl bg-primary px-5 py-3.5 text-white shadow-xl shadow-primary/25"
           aria-label={`View cart, ${totalItems} items, total ${formatPrice(grandTotal)}`}
         >
           <span className="flex items-center gap-2 text-sm font-semibold">

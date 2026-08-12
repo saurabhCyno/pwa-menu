@@ -10,7 +10,7 @@ export function ToastContainer() {
 
   return (
     <div
-      className="pointer-events-none absolute bottom-24 left-0 right-0 z-[60] flex flex-col gap-2 px-4"
+      className="pointer-events-none fixed bottom-24 left-4 right-4 z-[60] mx-auto flex max-w-[398px] flex-col gap-2"
       aria-live="polite"
     >
       <AnimatePresence>
